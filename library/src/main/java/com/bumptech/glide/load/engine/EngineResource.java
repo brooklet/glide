@@ -104,6 +104,9 @@ class EngineResource<Z> implements Resource<Z> {
     // To avoid deadlock, always acquire the listener lock before our lock so that the locking
     // scheme is consistent (Engine -> EngineResource). Violating this order leads to deadlock
     // (b/123646037).
+    if(listener == null){
+      return;
+    }
     synchronized (listener) {
       synchronized (this) {
         if (acquired <= 0) {
