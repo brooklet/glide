@@ -2,4 +2,4 @@ jdk:
   - openjdk9
 install:
    - echo "Running a custom install command"
-   - ./gradlew -Pgroup=com.github.brooklet -Pversion=v4.9.0_fix -x test install
+   - ./gradlew -Pgroup=com.github.brooklet -Pversion=v4.9.0_fix -x test install --stacktrace --debug
