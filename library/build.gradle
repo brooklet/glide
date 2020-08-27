@@ -61,4 +61,9 @@ def classPathForQuality() {
     )
 }
 
+tasks.withType(Checkstyle) {
+    ignoreFailures true
+    exclude '**/**'
+}
+
 apply from: "${rootProject.projectDir}/scripts/upload.gradle"
