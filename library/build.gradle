@@ -49,7 +49,7 @@ android {
 
 check.dependsOn(':library:findbugs:findbugs')
 check.dependsOn(':library:pmd:pmd')
-check.dependsOn(':library:test:check')
+// check.dependsOn(':library:test:check')
 
 // Used in pmd and findbugs subprojects.
 @SuppressWarnings("GroovyUnusedDeclaration")
