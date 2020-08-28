@@ -47,8 +47,8 @@ android {
     }
 }
 
-check.dependsOn(':library:findbugs:findbugs')
-check.dependsOn(':library:pmd:pmd')
+// check.dependsOn(':library:findbugs:findbugs')
+// check.dependsOn(':library:pmd:pmd')
 // check.dependsOn(':library:test:check')
 
 // Used in pmd and findbugs subprojects.
@@ -61,9 +61,5 @@ def classPathForQuality() {
     )
 }
 
-tasks.withType(Checkstyle) {
-    ignoreFailures true
-    exclude '**/**'
-}
 
 apply from: "${rootProject.projectDir}/scripts/upload.gradle"

@@ -2,4 +2,4 @@ jdk:
   - oraclejdk8
 install:
    - echo "Running a custom install command"
-   - ./gradlew  clean -x test build
+   - ./gradlew  clean -x checkstyle -x pmd -x findbugs -x lint -x test build
